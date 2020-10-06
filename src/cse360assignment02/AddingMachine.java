@@ -1,13 +1,19 @@
 package cse360assignment02;
 
 public class AddingMachine {
+	
+	/**
+	 * Private Variables
+	 */
 	private int total;
+	private String history;
 	 
 	/**
-	 * AddingMachine Constructor
+	 * Constructor
 	 */
 	public AddingMachine () {
-		total = 0;  // not needed - included for clarity
+		total = 0;
+		history = "0";
 	}
 	 
 	
@@ -16,7 +22,7 @@ public class AddingMachine {
 	 * @return current total
 	 */
 	public int getTotal () {
-		return 0;
+		return this.total;
 	}
 	  
 	
@@ -25,6 +31,9 @@ public class AddingMachine {
 	 * @param value how much to add
 	 */
 	public void add (int value) {
+		this.history += " + " + value;
+		
+		this.total += value;
 	}
 
 	
@@ -33,21 +42,26 @@ public class AddingMachine {
 	 * @param value how much to subtract
 	 */
 	public void subtract (int value) {
+		this.history += " - " + value;
+		
+		this.total -= value;
 	}
 
 	
 	/**
-	 * String representation of the adding machine.
-	 * @returns string representation
+	 * String representation of the history of the adding machine.
+	 * @returns calculator history
 	 */
 	public String toString () {
-	  return "";
+	  return this.history;
 	}
 	
 
 	/**
-	 * Clears/resets the adding machine.
+	 * Clears the adding machine by resetting the history setting total to 0.
 	 */
 	public void clear() {
+		this.total = 0;
+		this.history = "0";
 	}
 }

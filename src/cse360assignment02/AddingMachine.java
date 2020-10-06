@@ -1,5 +1,14 @@
 package cse360assignment02;
 
+/**
+ * AddingMachine.java
+ * Implements a rudimentary calculator.
+ * @author cjsturgess (Christopher Sturgess 1214841745)
+ *
+ * Link: https://github.com/cjsturgess/CSE360
+ * Access: It's a public link.
+ */
+
 public class AddingMachine {
 	
 	/**
